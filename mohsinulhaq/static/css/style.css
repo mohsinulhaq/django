@@ -1,0 +1,16 @@
+@media all and (max-width: 480px) {
+    .content {
+        margin-top: 20%;
+        margin-bottom: 25%;
+    }
+}
+@media all and (min-width: 480px) {
+    .content {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+.footer {
+    padding-top: 1%;
+    color: white;
+}
