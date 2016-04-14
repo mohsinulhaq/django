@@ -1,7 +1,4 @@
 /* main */
-body {
-    background-color: #F4F4F4;
-}
 @media all and (max-width: 480px) {
     .content {
         margin-top: 20%;
