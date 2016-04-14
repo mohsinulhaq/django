@@ -7,12 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title }}</title>
   <link rel="icon" href="{% static 'images/favicon.ico' %}">
-  <link rel="stylesheet" href="http://bootswatch.com/united/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  {% for style in styles %}
-    <link rel="stylesheet" href="{% static 'css/'|add:style %}">
-  {% endfor %}
+  {% block style %}{% endblock %}
 </head>
 
 <body>
@@ -63,9 +61,7 @@
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="{% static 'js/script.js' %}"></script>
-  {% for script in scripts %}
-    <script src="{% static 'js/'|add:script %}"></script>
-  {% endfor %}
+  {% block script %}{% endblock %}
 </body>
 
 </html>

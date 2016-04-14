@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 {% block content %}
 <div class="container content">
   <div class="row">
@@ -120,4 +122,9 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/facebook.js' %}"></script>
+    <script src="{% static 'js/fbsdksetup.js' %}"></script>
 {% endblock %}
