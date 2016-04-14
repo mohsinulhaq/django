@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 {% block content %}
 <div class="container content">
   <div class="row">
@@ -11,7 +13,7 @@
   </div>
   <div class="row">
     <div class="col-xs-6 text-right">
-      <img src="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/linkedIN.png" style="width:35px;" alt="linkedin">
+      <img src="{% static 'images/linkedin.png' %}" style="width:35px;" alt="linkedin">
     </div>
     <div class="col-xs-6">
       <h4>
@@ -21,7 +23,7 @@
   </div>
   <div class="row">
     <div class="col-xs-6 text-right">
-      <img src="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/facebook.png" style="width:35px;" alt="facebook">
+      <img src="{% static 'images/facebook.png' %}" style="width:35px;" alt="facebook">
     </div>
     <div class="col-xs-6">
       <h4>
@@ -31,7 +33,7 @@
   </div>
   <div class="row">
     <div class="col-xs-6 text-right">
-      <img src="https://cdn3.iconfinder.com/data/icons/happily-colored-snlogo/128/twitter.png" style="width:35px;" alt="twitter">
+      <img src="{% static 'images/twitter.png' %}" style="width:35px;" alt="twitter">
     </div>
     <div class="col-xs-6">
       <h4>
