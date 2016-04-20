@@ -14,18 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.contrib import admin
-
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index.as_view(), name="index"),
-    url(r'^autocomplete/$', views.autocomplete.as_view(), name='autocomplete'),
-    url(r'^radio/$', views.radio.as_view(), name='radio'),
-    url(r'^regex/$', views.regex.as_view(), name='regex'),
-    url(r'^facebook/$', views.facebook.as_view(), name='facebook'),
-    url(r'^pagination/$', views.pagination.as_view(), name='pagination'),
-    url(r'^about/$', views.about.as_view(), name='about'),
-    url(r'^test/$', views.test.as_view(), name='test'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.Index.as_view(), name='index'),
+    url(r'^autocomplete/$', views.Autocomplete.as_view(), name='autocomplete'),
+    url(r'^radio/$', views.Radio.as_view(), name='radio'),
+    url(r'^regex/$', views.Regex.as_view(), name='regex'),
+    url(r'^facebook/$', views.Facebook.as_view(), name='facebook'),
+    url(r'^pagination/$', views.Pagination.as_view(), name='pagination'),
+    url(r'^github/$', views.Github.as_view(), name='github'),
+    url(r'^test/$', views.Test.as_view(), name='test')
 ]

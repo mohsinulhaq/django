@@ -2,68 +2,41 @@ from django.shortcuts import render
 from django.views.generic import View
 
 
-class index(View):
-
+class Index(View):
     def get(self, request):
-        return render(request, 'index.html', {'title': 'Mohsin Ul Haq',
-                                              'styles': ['index.css'],
-                                              'scripts': ['index.js']})
+        return render(request, 'index.html', {'title': 'Mohsin Ul Haq'})
 
 
-class autocomplete(View):
-
+class Autocomplete(View):
     def get(self, request):
-        return render(request, 'autocomplete.html',
-                      {'title': 'Autocomplete',
-                       'styles': ['autocomplete.css'],
-                       'scripts': ['autocomplete.js']})
+        return render(request, 'autocomplete.html', {'title': 'Autocomplete'})
 
 
-class radio(View):
-
+class Radio(View):
     def get(self, request):
-        return render(request, 'radio.html', {'title': 'Custom Radio Button',
-                                              'styles': ['radio.css'],
-                                              'scripts': []})
+        return render(request, 'radio.html', {'title': 'Custom Radio Button'})
 
 
-class regex(View):
-
+class Regex(View):
     def get(self, request):
-        return render(request, 'regex.html', {'title': 'Regex Validation',
-                                              'styles': ['regex.css'],
-                                              'scripts': ['regex.js']})
+        return render(request, 'regex.html', {'title': 'Regex Validation'})
 
 
-class facebook(View):
-
+class Facebook(View):
     def get(self, request):
-        return render(request, 'facebook.html',
-                      {'title': 'Facebook Integration',
-                       'styles': ['facebook.css'],
-                       'scripts': ['facebook.js', 'fbsdksetup.js']})
+        return render(request, 'facebook.html', {'title': 'Facebook Integration'})
 
 
-class pagination(View):
-
+class Pagination(View):
     def get(self, request):
-        return render(request, 'pagination.html',
-                      {'title': 'Pagination',
-                       'styles': ['pagination.css'],
-                       'scripts': ['pagination.js']})
+        return render(request, 'pagination.html', {'title': 'Pagination'})
 
 
-class about(View):
-
+class Github(View):
     def get(self, request):
-        return render(request, 'about.html', {'title': 'About Me',
-                                              'styles': [],
-                                              'scripts': []})
+        return render(request, 'github.html', {'title': 'GitHub Search'})
 
 
-class test(View):
-
+class Test(View):
     def get(self, request):
-        return render(request, 'test.html', {'title': 'Test',
-                                             'styles': ['test.css'],
-                                             'scripts': ['test.js']})
+        return render(request, 'test.html', {'title': 'Test'})
