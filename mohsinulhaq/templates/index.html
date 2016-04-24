@@ -1,19 +1,176 @@
-{% extends 'base.html' %}
 {% load staticfiles %}
-
-{% block content %}
-<div class="container content">
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      <img src="{% static 'images/mohsin.webp' %}" width="20%" height="0%" alt="Mohsin Ul Haq">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <link rel="icon" href="{% static 'images/favicon.ico' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.teal-deep_purple.min.css"/>
+  <style>
+    body {
+      background-color: #F4F4F4;
+      font-family: 'Lato', sans-serif;
+    }
+    .mdl-mini-footer {
+      padding: 20px;
+    }
+    #love {
+      cursor: pointer;
+    }
+    .mdl-card a {
+      text-decoration: none;
+    }
+    .demo-card-wide.mdl-card {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">Mohsin Ul Haq</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#">Log In</a>
+      </nav>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="search" id="fixed-header-drawer-exp">
+        </div>
+      </div>
     </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout__title">Useless Sidebar</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Useless link 1</a>
+      <a class="mdl-navigation__link" href="">Useless link 2</a>
+      <a class="mdl-navigation__link" href="">Useless link 3</a>
+    </nav>
   </div>
-  <div class="row">
-    <div class="col-xs-6 col-xs-offset-3 text-center">
-      <h3>
-        I am Mohammad Mohsin Ul Haq, currently pursuing B. Tech. Computer Science & Engineering from NIT Srinagar.
-      </h3>
+  <main class="mdl-layout__content">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--5-col">
+        <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+          <div class="mdl-card__supporting-text">
+            <img src="{% static 'images/mohsin.webp' %}" alt="mohsinulhaq" width="100%">
+          </div>
+        </div>
+      </div>
+      <div class="mdl-cell mdl-cell--7-col">
+        <div class="mdl-card mdl-shadow--2dp" style="width: 100%">
+          <div class="mdl-card__supporting-text" style="font-size: larger; line-height: 150%;">
+            My name is Mohammad Mohsin Ul Haq.
+            I am currently pursuing B.Tech. Computer Science & Engineering from NIT Srinagar.
+            Web development is my passion. I know C, C++, Java, Python, HTML5, CSS3, JavaScript, Flask, and Django.
+            I have done my internship on Python Web Development using jQuery from
+            <a href="//nearfox.com/blog/kashmiri-internship-startup/" target="_blank">Nearfox</a>, Mumbai.<br>
+            This website is built with <a href="//www.djangoproject.com/" target="_blank">Django</a> as backend and
+            Google's
+            <a href="//getmdl.io" target="_blank">Material Design Lite</a> as the frontend framework. I use
+            <a href="http://nginx.org/en/" target="_blank">nginx</a> as reverse proxy for gunicorn for static file
+            serving.
+            The whole system is deployed as an Amazon <a href="https://aws.amazon.com/" target="_blank">AWS</a>
+            <a href="https://aws.amazon.com/ec2/" target="_blank">EC2</a> instance
+          </div>
+        </div>
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Contact Me</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <i class="material-icons">phone</i> <span style="font-size: larger">&nbsp;&nbsp;+918803452818</span><br>
+            <i class="material-icons">email</i> <a href="mailto:mohsinulhaq01@gmail.com?Subject=Hello,%20Mohsin!"
+                                                   target="_blank" style="font-size: larger">&nbsp;&nbsp;Gmail</a><br>
+            <i class="material-icons">thumb_up</i> <a href="//www.facebook.com/mohsinulhaq/" target="_blank"
+                                                      style="font-size: larger">&nbsp;&nbsp;mohsinulhaq</a><br>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Have a nice day!&nbsp;&nbsp;<i class="material-icons">sentiment_very_satisfied</i>
+            </a>
+          </div>
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="message">
+              <i class="material-icons">message</i>
+            </button>
+            <div class="mdl-tooltip mdl-tooltip--left" for="message">
+              Leave a direct message
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div style="position: fixed; bottom: 13%; right: 20px; z-index: 99999;">
+      <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="0" id="love">favorite</div>
+      <div class="mdl-tooltip mdl-tooltip--left" for="love">
+        Click this button if you love me <br>(or my website) <i class="material-icons">mood</i>
+      </div>
+    </div>
+  </main>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__right-section">
+      <ul class="mdl-mini-footer__link-list">
+        <li><a href="//www.linkedin.com/in/mohsinulhaq/" target="_blank" id="linkedin">L</a></li>
+        <li><a href="//github.com/mohsinulhaq/" target="_blank" id="github">G</a></li>
+        <li><a href="//twitter.com/mohsinulhaq/" target="_blank" id="twitter">T</a></li>
+      </ul>
+      <div class="mdl-tooltip mdl-tooltip--top" for="linkedin">
+        LinkedIn
+      </div>
+      <div class="mdl-tooltip mdl-tooltip--top" for="github">
+        GitHub
+      </div>
+      <div class="mdl-tooltip mdl-tooltip--top" for="facebook">
+        Facebook
+      </div>
+      <div class="mdl-tooltip mdl-tooltip--top" for="twitter">
+        Twitter
+      </div>
+    </div>
+  </footer>
+  <div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
   </div>
 </div>
-{% endblock %}
+<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<script>
+  (function () {
+    'use strict';
+    let snackbarContainer = document.querySelector('#demo-snackbar-example');
+    let love = document.querySelector('#love');
+    let undo = document.querySelector('.mdl-snackbar__action');
+    let handler = function (event) {
+      let dataBadge = love.getAttribute('data-badge');
+      love.setAttribute('data-badge', Number(dataBadge) - 1);
+      undo.disabled = true;
+    };
+    love.addEventListener('click', function () {
+      'use strict';
+      let dataBadge = love.getAttribute('data-badge');
+      love.setAttribute('data-badge', Number(dataBadge) + 1);
+      undo.disabled = false;
+      let data = {
+        message: 'Thank You!',
+        timeout: 2000,
+        actionHandler: handler,
+        actionText: 'Undo'
+      };
+      snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    });
+  }());
+  console.log('Welcome... Inspect my shit now');
+</script>
+</body>
+</html>
