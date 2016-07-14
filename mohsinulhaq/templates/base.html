@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Mohammad Mohsin Ul Haq, B.Tech Computer Science & Engineering student at NIT Srinagar">
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
   <title>{{ title }}</title>
-  <link rel="icon" href="{% static 'images/favicon.ico' %}">
   <link rel="stylesheet" href="//bootswatch.com/flatly/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <meta name="description" content="The website belongs to Mohsin Ul Haq. He experiments with all new learnings by implementing them here. The website is built on Django and jQuery.">
   {% block style %}{% endblock %}
 </head>
 
@@ -32,7 +32,6 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="{% url 'github' %}">Github Search</a></li>
             <li><a href="{% url 'facebook' %}">Facebook Integration</a></li>
             <li><a href="{% url 'pagination' %}">Pagination</a></li>
             <li><a href="{% url 'autocomplete' %}">Autocomplete Dropdown</a></li>
@@ -49,11 +48,11 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 text-right">
-        <a href="//www.linkedin.com/in/mohsinulhaq/" target="_blank"><img src="{% static 'images/linkedin.png' %}"
+        <a href="//www.linkedin.com/in/mohsinulhaq/" target="_blank"><img src="{% static 'img/linkedin.png' %}"
                                                                           width="32px" height="32px"></a>
-        <a href="//facebook.com/mohsinulhaq/" target="_blank"><img src="{% static 'images/facebook.png' %}" width="32px"
+        <a href="//facebook.com/mohsinulhaq/" target="_blank"><img src="{% static 'img/facebook.png' %}" width="32px"
                                                                    height="32px"></a>
-        <a href="//twitter.com/mohsinulhaq/" target="_blank"><img src="{% static 'images/twitter.png' %}" width="32px"
+        <a href="//twitter.com/mohsinulhaq/" target="_blank"><img src="{% static 'img/twitter.png' %}" width="32px"
                                                                   height="32px"></a>
       </div>
     </div>
@@ -62,7 +61,7 @@
 <script src="//code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-{#<script src="{% static 'js/script.js' %}"></script>#}
+<script src="{% static 'js/script.js' %}"></script>
 {% block script %}{% endblock %}
 </body>
 

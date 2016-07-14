@@ -17,12 +17,11 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.Index.as_view(), name='index'),
+    url(r'^$', views.Github.as_view(), name='index'),
     url(r'^autocomplete/$', views.Autocomplete.as_view(), name='autocomplete'),
     url(r'^radio/$', views.Radio.as_view(), name='radio'),
     url(r'^regex/$', views.Regex.as_view(), name='regex'),
     url(r'^facebook/$', views.Facebook.as_view(), name='facebook'),
     url(r'^pagination/$', views.Pagination.as_view(), name='pagination'),
-    url(r'^github/$', views.Github.as_view(), name='github'),
     url(r'^test/$', views.Test.as_view(), name='test')
 ]

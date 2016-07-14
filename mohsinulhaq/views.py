@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.views.generic import View
 
 
-class Index(View):
+class Github(View):
     def get(self, request):
-        return render(request, 'index.html', {'title': 'Mohsin Ul Haq'})
+        return render(request, 'github.html', {'title': 'Mohsin Ul Haq'})
 
 
 class Autocomplete(View):
@@ -30,11 +30,6 @@ class Facebook(View):
 class Pagination(View):
     def get(self, request):
         return render(request, 'pagination.html', {'title': 'Pagination'})
-
-
-class Github(View):
-    def get(self, request):
-        return render(request, 'github.html', {'title': 'GitHub Search'})
 
 
 class Test(View):
